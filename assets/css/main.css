@@ -1843,6 +1843,12 @@ a {
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (max-width: 768px) {
+  .caroucel .container {
+    height: 100%;
+    text-align: center;
+  }
+}
 .caroucel .container .caroucel-content .content-info .content-title {
   font-size: 16.5px;
   font-weight: 600;
@@ -1953,6 +1959,14 @@ a {
     flex-direction: column;
     gap: 30px;
   }
+}
+@media screen and (max-width: 480px) {
+  .find-your-course .container .find-img {
+    width: 50%;
+  }
+}
+.find-your-course .container .find-img img {
+  width: 100%;
 }
 .find-your-course .container .find-content .frm-find {
   box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
