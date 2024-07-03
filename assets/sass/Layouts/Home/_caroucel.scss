@@ -1,0 +1,31 @@
+.caroucel {
+  background: url("../img/yellow_top_wave_01.png"),
+    url("../img/Violet_top_left_wave.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top, bottom;
+  height: 700px;
+  .container {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .caroucel-content {
+      .content-info {
+        .content-title {
+          @include textStyle($fs-6xl, $fw-semi, $text-primary);
+          line-height: $lh-2;
+          margin-bottom: 8px;
+        }
+        .content-alias {
+          @include textStyle($fs-9xl, $fw-bold, $text-black);
+          line-height: $lh-7;
+        }
+      }
+    }
+    .caroucel-img {
+      img {
+      }
+    }
+  }
+}

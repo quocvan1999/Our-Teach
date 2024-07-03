@@ -1,0 +1,68 @@
+.team {
+  background: $bg-gray;
+  background-image: url("../img/Wave_White_bottom_right_shape_01.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  .container {
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      @media screen and (max-width: 1024px) {
+        justify-content: center;
+      }
+      .col {
+        width: calc(100% / 4);
+        padding: 20px;
+        @media screen and (max-width: 1024px) {
+          width: calc(100% / 3);
+        }
+
+        @media screen and (max-width: 992px) {
+          width: calc(100% / 2);
+        }
+
+        @media screen and (max-width: 480px) {
+          width: calc(100% / 1);
+        }
+        .card {
+          background: $bg-white;
+          border-radius: 15px;
+          transition: all 0.5s;
+
+          &:hover {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+              rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          }
+          .card-img {
+            img {
+              border-top-left-radius: 15px;
+              border-top-right-radius: 15px;
+              width: 100%;
+              display: block;
+              cursor: pointer;
+            }
+          }
+          .card-body {
+            cursor: pointer;
+            text-align: center;
+            padding: 35px 30px;
+            .card-title {
+              @include textStyle($fs-1xl, $fw-semi, $text-primary);
+              line-height: $lh-1;
+            }
+            .card-name {
+              @include textStyle($fs-7xl, $fw-bold, $text-black);
+              line-height: $lh-4;
+              margin: 7px 0 16px 0;
+            }
+            .card-content {
+              @include textStyle($fs-5xl, $fw-light, $text-black);
+              line-height: $lh-3;
+            }
+          }
+        }
+      }
+    }
+  }
+}

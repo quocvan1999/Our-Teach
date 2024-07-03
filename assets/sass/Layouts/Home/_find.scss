@@ -1,0 +1,83 @@
+.find-your-course {
+  background: url("../img/accent_bottom_wave_01.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  padding: 50px 0;
+  .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    @media screen and (max-width: 992px) {
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    @media screen and (max-width: 480px) {
+      
+    }
+    .find-img {
+      img {
+      }
+    }
+    .find-content {
+      .frm-find {
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+          rgba(0, 0, 0, 0.05) 0px 5px 10px;
+        background: $bg-white;
+        padding: 40px 25px;
+        border-radius: 15px;
+        .form-title {
+          @include textStyle($fs-8xl, $fw-bold, $text-black);
+          margin-bottom: 50px;
+        }
+        .row {
+          .col-50 {
+            display: flex;
+            margin-bottom: 5px;
+            gap: 10px;
+            .input-container {
+              @extend .input-container;
+              width: 50%;
+              display: flex;
+              svg {
+                font-size: $fs-5xl;
+                margin-right: 7px;
+              }
+              .input {
+                width: 100%;
+                &:focus {
+                  border: none;
+                  outline: none;
+                }
+              }
+            }
+          }
+          .col {
+            .input-container {
+              @extend .input-container;
+              margin-bottom: 5px;
+              display: flex;
+              svg {
+                font-size: $fs-5xl;
+                margin-right: 7px;
+              }
+              .input {
+                width: 100%;
+                &:focus {
+                  border: none;
+                  outline: none;
+                }
+              }
+            }
+          }
+          .btn-send {
+            @extend .btn-primary;
+            padding: 13px 35px;
+            margin-top: 50px;
+          }
+        }
+      }
+    }
+  }
+}

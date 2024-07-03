@@ -1,0 +1,30 @@
+@mixin textStyle($fs: $fs-1xl, $fw: $fw-light, $color: $text-black) {
+  font-size: $fs;
+  font-weight: $fw;
+  color: $color;
+}
+
+@mixin buttonStyle(
+  $fontSize,
+  $fontWeight,
+  $color,
+  $background,
+  $padding,
+  $border,
+  $broderRadius,
+  $background-hover,
+  $color-hover
+) {
+  @include textStyle($fontSize, $fontWeight, $color);
+  background: $background;
+  padding: $padding;
+  border: $border;
+  border-radius: $broderRadius;
+  transition: all 0.5s;
+  cursor: pointer;
+
+  &:hover {
+    color: $color-hover;
+    background: $background-hover;
+  }
+}
