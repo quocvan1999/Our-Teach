@@ -1960,7 +1960,7 @@ a {
     gap: 30px;
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .find-your-course .container .find-img {
     width: 50%;
   }
